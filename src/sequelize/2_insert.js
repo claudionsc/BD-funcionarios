@@ -1,52 +1,52 @@
-const models = require('./models')
+const models = require('../models')
 
  async function insert() {
     // PESSOAS
 
-    const claudio = await models.pessoas.create({
-        nome: 'Claudio Nascimento',
-        idade: 26,
+    const pedro = await models.pessoas.create({
+        nome: 'Pedro Nascimento',
+        idade: 38,
         setor: 'fullstack, design, adm',
         salario: 23.000
     })
-    const diego = await models.pessoas.create({
-        nome: 'Diego Alves',
+    const henrique = await models.pessoas.create({
+        nome: 'Henrique Alves',
         idade: 18,
         setor: 'atendimento',
         salario: 1.320
     })
-    const diogo = await models.pessoas.create({
-        nome: 'Diogo da Silva',
+    const felipe = await models.pessoas.create({
+        nome: 'Felipe da Silva',
         idade: 18,
         setor: 'atendimento',
         salario: 1.320
     })
     const joanderson = await models.pessoas.create({
-        nome: 'Joanderson Alves',
-        idade: 18,
+        nome: 'Joanderson Almeida',
+        idade: 24,
         setor: 'frontend',
         salario: 3.500
     })
     const vanessa = await models.pessoas.create({
-        nome: 'Vanessa Vieira',
-        idade: 23,
+        nome: 'Vanessa Santana',
+        idade: 37,
         setor: 'adm',
         salario: 23.000
     })
-    const carina = await models.pessoas.create({
-        nome: 'Carina de Jesus',
-        idade: 40,
+    const Ana = await models.pessoas.create({
+        nome: 'Ana de Jesus',
+        idade: 22,
         setor: 'design',
         salario: 3.000
     })
     const luis = await models.pessoas.create({
-        nome: 'Luis Almeida',
+        nome: 'Luis dos Santos Silva',
         idade: 45,
         setor: 'adm',
-        salario: 1.320
+        salario: 23.000
     })
     const gabriel = await models.pessoas.create({
-        nome: 'Gabriel Alvi',
+        nome: 'Gabriel Vieira',
         idade: 26,
         setor: 'design, adm',
         salario: 23.000
@@ -72,12 +72,12 @@ const models = require('./models')
 
     // RELACIONAIS
 
-    await claudio.setFuncaos([socio, adm, dev])
-    await diego.setFuncaos([atd])
-    await diogo.setFuncaos([atd])
+    await pedro.setFuncaos([socio, adm, dev])
+    await henrique.setFuncaos([atd])
+    await felipe.setFuncaos([atd])
     await joanderson.setFuncaos([dev])
     await vanessa.setFuncaos([socio, adm])
-    await carina.setFuncaos([design])
+    await Ana.setFuncaos([design])
     await luis.setFuncaos([adm])
     await gabriel.setFuncaos([socio, adm, design])
 

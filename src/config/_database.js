@@ -1,14 +1,18 @@
 const Sequelize = require('sequelize');
 
 const sequelize = new Sequelize({
+  dialect: 'postgres',
+  port: '5432',
   host: 'localhost',
-  database: 'BD-funcionarios',
   username: 'postgres',
   password: 'admin',
-  dialect: 'postgres',
-  port: 5432,
-  logging: true
-});
+  logging: true,
+  define: {
+  timestaps: true,
+  underscored: true,
+
+}},
+)
 
 module.exports = sequelize
 

@@ -18,7 +18,14 @@
   },
   "homepage": "https://github.com/claudionsc/BD-funcionarios#readme",
   "dependencies": {
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.17.0",
     "pg": "^8.8.0",
     "sequelize": "^6.21.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
   }
 }

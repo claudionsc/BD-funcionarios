@@ -1,5 +1,5 @@
-const { funcao, pessoas } = require('./models')
-const models = require('./models')
+const { funcao, pessoas } = require('../models')
+const models = require('../models')
 
 async function select(){
     console.log('\n')
@@ -22,7 +22,10 @@ async function select(){
         ]
     })
     funcoesPessoas.forEach((pessoas) => {
-        console.log('Nome', pessoas.nome)
+        console.log(
+            `Nome: ${pessoas.nome}
+            Salário: ${pessoas.salario}
+        `)
         pessoas.funcaos.forEach((funcao) => {
             console.log(`----> Funções: ${funcao.nome}`)
         })
