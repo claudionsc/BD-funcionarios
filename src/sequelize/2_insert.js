@@ -7,49 +7,49 @@ const models = require('../models')
         nome: 'Pedro Nascimento',
         idade: 38,
         setor: 'fullstack, design, adm',
-        salario: 23.000
+        salario: 23000.00.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
     })
     const henrique = await models.pessoas.create({
         nome: 'Henrique Alves',
         idade: 18,
         setor: 'atendimento',
-        salario: 1.320
+        salario: 1320.00.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
     })
     const felipe = await models.pessoas.create({
         nome: 'Felipe da Silva',
         idade: 18,
         setor: 'atendimento',
-        salario: 1.320
+        salario: 1320.00.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
     })
     const joanderson = await models.pessoas.create({
         nome: 'Joanderson Almeida',
         idade: 24,
         setor: 'frontend',
-        salario: 3.500
+        salario: 3500.00.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
     })
     const vanessa = await models.pessoas.create({
         nome: 'Vanessa Santana',
         idade: 37,
         setor: 'adm',
-        salario: 23.000
+        salario: 23000.00.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
     })
     const Ana = await models.pessoas.create({
         nome: 'Ana de Jesus',
         idade: 22,
         setor: 'design',
-        salario: 3.000
+        salario: 3000.00.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
     })
     const luis = await models.pessoas.create({
         nome: 'Luis dos Santos Silva',
         idade: 45,
         setor: 'adm',
-        salario: 23.000
+        salario: 23000.00.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
     })
     const gabriel = await models.pessoas.create({
         nome: 'Gabriel Vieira',
         idade: 26,
         setor: 'design, adm',
-        salario: 23.000
+        salario: 23000.00.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
     })
 
     // FUNÇÕES

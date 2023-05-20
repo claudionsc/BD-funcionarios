@@ -6,12 +6,12 @@ async function select(){
 
     const pessoas = await models.pessoas.findAll()
     pessoas.forEach((pessoas) => {
-        console.log(`Pessoas: ${pessoas.nome}`)
+        // console.log(`Pessoas: ${pessoas.nome}`)
     })
 
     const funcaos = await models.funcoes.findAll()
     funcaos.forEach((funcaos) => {
-        console.log(`Funções:${funcaos.nome}`)
+        // console.log(`Funções:${funcaos.nome}`)
     })
 
     const funcoesPessoas = await models.pessoas.findAll({
@@ -21,14 +21,29 @@ async function select(){
             }
         ]
     })
+
+    const array = [];
+    
     funcoesPessoas.forEach((pessoas) => {
-        console.log(
-            `Nome: ${pessoas.nome}
-            Salário: ${pessoas.salario}
-        `)
-        pessoas.funcaos.forEach((funcao) => {
-            console.log(`----> Funções: ${funcao.nome}`)
-        })
+
+        function Funcoes(){
+            let fun = []
+            pessoas.funcaos.forEach((funcao) => {
+             let arr = fun.push(funcao.nome)
+            })
+            return fun
+        }
+
+        const map = {
+            Nome: pessoas.nome,
+            Função: Funcoes(),
+            Salario: pessoas.salario
+        }
+        
+       array.push(map)
+
+       
     })
+    console.table(array)
 }
 select()

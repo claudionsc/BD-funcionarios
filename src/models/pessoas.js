@@ -13,7 +13,7 @@ const Pessoas = sequelize.define('pessoas', {
         type: Sequelize.STRING
     },
     salario: {
-        type: Sequelize.DECIMAL
+        type: Sequelize.STRING
     }
 })
 
